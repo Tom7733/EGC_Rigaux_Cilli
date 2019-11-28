@@ -11,15 +11,17 @@ namespace Couche_Modele.Metier
         protected DTOObstacles _obstacle;
         protected Int16 _position;
         protected int _qte;
+        protected int _prix;
         #endregion
 
         #region Constructeurs
-        public DTOPartieObstacles(DTOParties partie, DTOObstacles obstacle, Int16 position, int qte)
+        public DTOPartieObstacles(DTOParties partie, DTOObstacles obstacle, Int16 position, int qte, int prix)
         {
             _partie = partie;
             _obstacle = obstacle;
             _position = position;
             _qte = qte;
+            _prix = prix;
         }
         #endregion
 
@@ -42,6 +44,11 @@ namespace Couche_Modele.Metier
         public int GetQte()
         {
             return _qte;
+        }
+
+        public int GetPrix()
+        {
+            return _prix;
         }
         #endregion
 

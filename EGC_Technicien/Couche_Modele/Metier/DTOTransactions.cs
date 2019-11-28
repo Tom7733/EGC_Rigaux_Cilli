@@ -8,8 +8,8 @@ namespace Couche_Modele.Metier
     {
         #region Attributs
         protected int _id;
-        protected char _typePaiement;
-        protected decimal _creditTransaction;
+        protected string _typePaiement;
+        protected int _creditTransaction;
         protected DateTime _date;
         protected string _reference;
         protected DTOClients _pseudo;
@@ -17,7 +17,7 @@ namespace Couche_Modele.Metier
         #endregion
 
         #region Constructeurs
-        public DTOTransactions(int id, char typePaiement, decimal creditTransaction, DateTime date, string reference, DTOClients pseudo, DTOParties partie)
+        public DTOTransactions(int id, string typePaiement, int creditTransaction, DateTime date, string reference, DTOClients pseudo, DTOParties partie)
         {
             _id = id;
             _typePaiement = typePaiement;
@@ -35,12 +35,12 @@ namespace Couche_Modele.Metier
             return _id;
         }
 
-        public char GetTypePaiement()
+        public string GetTypePaiement()
         {
             return _typePaiement;
         }
 
-        public decimal GetCreditTransaction()
+        public int GetCreditTransaction()
         {
             return _creditTransaction;
         }

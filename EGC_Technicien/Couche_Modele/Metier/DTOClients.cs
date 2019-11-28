@@ -15,11 +15,12 @@ namespace Couche_Modele.Metier
         protected DTOVille _ville;
         protected string _mail;
         protected string _telephone;
+        protected int _credit;
         protected bool _archiver;
         #endregion
 
         #region Constructeurs
-        public DTOClients(string pseudo, string nom, string prenom, DateTime datenaissance, string adresse, DTOVille ville, string mail, string telephone, bool archiver)
+        public DTOClients(string pseudo, string nom, string prenom, DateTime datenaissance, string adresse, DTOVille ville, string mail, string telephone, int credit, bool archiver)
         {
             _pseudo = pseudo;
             _nom = nom;
@@ -30,6 +31,7 @@ namespace Couche_Modele.Metier
             _mail = mail;
             _telephone = telephone;
             _archiver = archiver;
+            _credit = credit;
         }
         #endregion
 
@@ -65,6 +67,10 @@ namespace Couche_Modele.Metier
         public string GetTelephone()
         {
             return _telephone;
+        }
+        public int GetCredit()
+        {
+            return _credit;
         }
         public bool GetArchiver()
         {

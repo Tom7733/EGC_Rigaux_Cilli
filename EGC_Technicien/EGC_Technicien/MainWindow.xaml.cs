@@ -25,7 +25,8 @@ namespace EGC_Technicien
     {
         public MainWindow()
         {
-            Dbal bdd = new Dbal("172.31.254.186", "egc", "Admin", "Admin");
+            Dbal bdd = new Dbal("192.168.1.22", "egc", "Admin", "Admin");
+            //Dbal bdd = new Dbal("172.31.254.186", "egc", "Admin", "Admin");
             DAOxClients clients = new DAOxClients(bdd);
             DAOxObstacles obstacles = new DAOxObstacles(bdd);
             DAOxPartieObstacles partieObstacles = new DAOxPartieObstacles(bdd);

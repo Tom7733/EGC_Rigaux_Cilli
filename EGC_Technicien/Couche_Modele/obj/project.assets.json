@@ -4413,27 +4413,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SIO2\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Showns\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SIO2\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
+      "projectUniqueName": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
       "projectName": "Couche_Modele",
-      "projectPath": "C:\\Users\\SIO2\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
-      "packagesPath": "C:\\Users\\SIO2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SIO2\\Desktop\\EGC_Technicien\\Couche_Modele\\obj\\",
+      "projectPath": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
+      "packagesPath": "C:\\Users\\Showns\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SIO2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Showns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -4468,10 +4461,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

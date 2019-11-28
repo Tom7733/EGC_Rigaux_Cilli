@@ -15,3 +15,11 @@ C:\Users\SIO2\Desktop\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couc
 C:\Users\SIO2\Desktop\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.AssemblyInfo.cs
 C:\Users\SIO2\Desktop\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.dll
 C:\Users\SIO2\Desktop\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.pdb
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\bin\Debug\netstandard2.0\Couche_Modele.deps.json
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\bin\Debug\netstandard2.0\Couche_Modele.dll
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\bin\Debug\netstandard2.0\Couche_Modele.pdb
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.csprojAssemblyReference.cache
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.AssemblyInfoInputs.cache
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.AssemblyInfo.cs
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.dll
+C:\Users\Showns\AppData\Local\gitkraken\app-6.3.1\EGC_Rigaux_Cilli\EGC_Technicien\Couche_Modele\obj\Debug\netstandard2.0\Couche_Modele.pdb

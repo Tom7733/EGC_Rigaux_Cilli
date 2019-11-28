@@ -11,17 +11,15 @@ namespace Couche_Modele.Metier
         protected string _nom;
         protected string _type;
         protected string _description;
-        protected decimal _prix;
         #endregion
 
         #region Constructeurs
-        public DTOObstacles(int id, string nom, string type, string description, decimal prix)
+        public DTOObstacles(int id, string nom, string type, string description)
         {
             _id = id;
             _nom = nom;
             _type = type;
             _description = description;
-            _prix = prix;
         }
         #endregion
 
@@ -41,10 +39,6 @@ namespace Couche_Modele.Metier
         public string GetDescription()
         {
             return _description;
-        }
-        public decimal GetPrix()
-        {
-            return _prix;
         }
         #endregion
 
