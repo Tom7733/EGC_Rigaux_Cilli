@@ -25,6 +25,14 @@ namespace Couche_Modele.Metier
             _heure_ouverture = heure_ouverture;
             _heure_fermeture = heure_fermeture;
         }
+
+        public DTOSalle(int id, string nom, string heure_ouverture, string heure_fermeture)
+        {
+            _id = id;
+            _nom = nom;
+            _heure_ouverture = heure_ouverture;
+            _heure_fermeture = heure_fermeture;
+        }
         #endregion
 
         #region Accesseurs
@@ -43,9 +51,19 @@ namespace Couche_Modele.Metier
             return _theme;
         }
 
+        public void SetTheme(DTOTheme dTOTheme)
+        {
+            _theme = dTOTheme;
+        }
+
         public DTOVille GetVille()
         {
             return _ville;
+        }
+
+        public void SetVille(DTOVille dTOVille)
+        {
+            _ville = dTOVille;
         }
 
         public string GetHeureOuverture()

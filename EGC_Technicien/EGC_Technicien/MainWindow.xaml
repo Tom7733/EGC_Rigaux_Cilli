@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EGC_Technicien"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="1000" MinWidth="1000" MinHeight="580">
+        Title="MainWindow" Height="580" Width="1200" MinWidth="1200" MinHeight="580">
     <Grid>
         <Grid x:Name="Header" Height="49" Background="#FF7F49ED" VerticalAlignment="Top">
             <Path Stretch="Fill" Width="1000" Height="49"/>
@@ -14,9 +14,9 @@
             </Button>
             <Button Background="#FFDEDCE2" Foreground="{x:Null}" BorderBrush="{x:Null}" Width="54" Height="49" VerticalAlignment="Top" HorizontalAlignment="Right"/>
         </Grid>
-        <Grid x:Name="Calendrier" Height="500" Margin="0,49,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="992" Visibility="Visible" >
+        <Grid x:Name="Calendrier" Height="500" Margin="0,49,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1182" Visibility="Visible" >
             <DatePicker x:Name="Selection_jour" Foreground="Black" Background="White" BorderBrush="Black" Margin="290,37,302,427"/>
-            <Grid x:Name="Partie_selectionner" Width="190" Height="500" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0">
+            <Grid x:Name="Partie_selectionner" Width="190" Height="500" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,0,-10">
                 <TextBlock Width="150" Margin="10,88,10,0" FontSize="18" TextAlignment="Center" Height="70" VerticalAlignment="Top">
                 <Run Text="Information "/>
                 <LineBreak/>
@@ -34,10 +34,10 @@
                 <Label Width="150" Height="30" Margin="10,346,10,124" Content="Liste obstacle :" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"></Label>
                 <Label x:Name="lbl_obstacle" Width="150" Margin="10,0,10,69" Background="#FF514747" Foreground="White" Content="Liste obstacle" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" VerticalAlignment="Bottom" MinHeight="50" MinWidth="150"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="397" Margin="0,103,0,0" VerticalAlignment="Top" Width="797">
-                <Grid x:Name="grid_planning" Background="White" HorizontalAlignment="Left" Height="328" Margin="35,10,0,0" VerticalAlignment="Top" Width="752">
-                    
-                   
+            <Grid HorizontalAlignment="Left" Height="397" Margin="0,103,0,0" VerticalAlignment="Top" Width="991">
+                <Grid x:Name="grid_planning" Background="White" HorizontalAlignment="Left" Height="328" Margin="35,10,0,0" VerticalAlignment="Top" Width="946">
+
+
                 </Grid>
             </Grid>
         </Grid>

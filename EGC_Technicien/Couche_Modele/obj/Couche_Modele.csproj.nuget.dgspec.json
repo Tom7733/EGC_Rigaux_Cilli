@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj": {}
+    "C:\\Users\\Showns\\AppData\\Local\\gitkraken\\app-6.3.1\\EGC_Rigaux_Cilli\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj": {
+    "C:\\Users\\Showns\\AppData\\Local\\gitkraken\\app-6.3.1\\EGC_Rigaux_Cilli\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
+        "projectUniqueName": "C:\\Users\\Showns\\AppData\\Local\\gitkraken\\app-6.3.1\\EGC_Rigaux_Cilli\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
         "projectName": "Couche_Modele",
-        "projectPath": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
+        "projectPath": "C:\\Users\\Showns\\AppData\\Local\\gitkraken\\app-6.3.1\\EGC_Rigaux_Cilli\\EGC_Technicien\\Couche_Modele\\Couche_Modele.csproj",
         "packagesPath": "C:\\Users\\Showns\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Showns\\Desktop\\EGC_Technicien\\Couche_Modele\\obj\\",
+        "outputPath": "C:\\Users\\Showns\\AppData\\Local\\gitkraken\\app-6.3.1\\EGC_Rigaux_Cilli\\EGC_Technicien\\Couche_Modele\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Showns\\AppData\\Roaming\\NuGet\\NuGet.Config",

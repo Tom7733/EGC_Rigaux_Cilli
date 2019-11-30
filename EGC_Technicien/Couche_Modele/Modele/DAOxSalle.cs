@@ -34,11 +34,12 @@ namespace Couche_Modele.Modele
             return listSalles;
         }
         
-        /**public DTOSalle SelectByIdSalle(int id)
+        public DTOSalle SelectByIdSalle(int id)
         {
             string retour = " * from salle where id = " + id + ";";
             DataTable table = _dbal.Select(retour);
-            
+            DTOSalle salle = new DTOSalle(Convert.ToInt32(table.Rows[0]["id"]), Convert.ToString(table.Rows[0]["nom"]), Convert.ToString(table.Rows[0]["heure_ouverture"]), Convert.ToString(table.Rows[0]["heure_fermeture"]));
+
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DAOxTheme dAOxTheme = new DAOxTheme(_dbal);
@@ -47,9 +48,10 @@ namespace Couche_Modele.Modele
                 DAOxVille dAOxVille = new DAOxVille(_dbal);
                 DTOVille ville = dAOxVille.SelectByIdVille(Convert.ToInt32(table.Rows[i][4]));
 
-                DTOSalle salle = new DTOSalle(Convert.ToInt32(table.Rows[i]["id"]), Convert.ToString(table.Rows[i]["nom"]), theme, ville, Convert.ToDateTime(table.Rows[i]["heure_ouverture"]), Convert.ToDateTime(table.Rows[i]["heure_fermeture"]));
+                salle.SetTheme(theme);
+                salle.SetVille(ville);
             }
             return salle;
-        }**/
+        }
     }
 }

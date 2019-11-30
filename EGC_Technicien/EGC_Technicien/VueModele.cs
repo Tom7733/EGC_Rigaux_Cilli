@@ -17,7 +17,10 @@ namespace EGC_Technicien.Databinding
     {
         protected Dbal _bdd;
         protected DAOxClients _clients;
+        protected DAOxFonction _fonction;
         protected DAOxObstacles _obstacles;
+        protected DAOxOperateur _operateur;
+        protected DAOxOperateurSalle _operateurSalle;
         protected DAOxPartieObstacles _partieObstacles;
         protected DAOxParties _parties;
         protected DAOxSalle _salle;
@@ -28,11 +31,14 @@ namespace EGC_Technicien.Databinding
 
         protected List<DTOSalle> list_salle;
 
-        public VueModele(Dbal dbal, DAOxClients dAOxClients, DAOxObstacles dAOxObstacles, DAOxPartieObstacles dAOxPartieObstacles, DAOxParties dAOxParties, DAOxSalle dAOxSalle, DAOxTheme dAOxTheme, DAOxTransactions dAOxTransactions, DAOxVille dAOxVille)
+        public VueModele(Dbal dbal, DAOxClients dAOxClients, DAOxFonction dAOxFonction, DAOxObstacles dAOxObstacles, DAOxOperateur dAOxOperateur, DAOxOperateurSalle dAOxOperateurSalle, DAOxPartieObstacles dAOxPartieObstacles, DAOxParties dAOxParties, DAOxSalle dAOxSalle, DAOxTheme dAOxTheme, DAOxTransactions dAOxTransactions, DAOxVille dAOxVille)
         {
             _bdd = dbal;
             _clients = dAOxClients;
+            _fonction = dAOxFonction;
             _obstacles = dAOxObstacles;
+            _operateur = dAOxOperateur;
+            _operateurSalle = dAOxOperateurSalle;
             _partieObstacles = dAOxPartieObstacles;
             _parties = dAOxParties;
             _salle = dAOxSalle;

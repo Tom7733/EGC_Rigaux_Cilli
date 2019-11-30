@@ -25,24 +25,29 @@ namespace EGC_Technicien
     {
         public MainWindow()
         {
-            Dbal bdd = new Dbal("192.168.1.22", "egc", "Admin", "Admin");
+            Dbal bdd = new Dbal("192.168.1.16", "egc", "Admin", "Admin");
             //Dbal bdd = new Dbal("172.31.254.186", "egc", "Admin", "Admin");
             DAOxClients clients = new DAOxClients(bdd);
+            DAOxFonction fonction = new DAOxFonction(bdd);
             DAOxObstacles obstacles = new DAOxObstacles(bdd);
+            DAOxOperateur operateur = new DAOxOperateur(bdd);
+            DAOxOperateurSalle operateurSalle = new DAOxOperateurSalle(bdd);
             DAOxPartieObstacles partieObstacles = new DAOxPartieObstacles(bdd);
             DAOxParties parties = new DAOxParties(bdd);
             DAOxSalle salle = new DAOxSalle(bdd);
             DAOxTheme theme = new DAOxTheme(bdd);
             DAOxTransactions transactions = new DAOxTransactions(bdd);
             DAOxVille ville = new DAOxVille(bdd);
+
             List<String> ListHoraire = new List<String> { "8h30", "10h00", "11h00", "12h30", "14h00", "15h30", "17h00", "18h30" };
 
             InitializeComponent();
 
-            Load_Planning(salle.SelectAllSalle());
+            Selection_jour.SelectedDate = DateTime.Now;
 
+            Load_Planning(salle.SelectAllSalle(), Convert.ToDateTime(Selection_jour.SelectedDate));
 
-            void Load_Planning(List<DTOSalle> listSalles)
+            void Load_Planning(List<DTOSalle> listSalles, DateTime date)
             {
                 RowDefinition rowDefinition = new RowDefinition();
                 rowDefinition.Height = new GridLength(50);
@@ -57,14 +62,7 @@ namespace EGC_Technicien
                 {
                     ColumnDefinition cm = new ColumnDefinition();
                     cm.Width = new GridLength(80);
-                    grid_planning.ColumnDefinitions.Add(cm);
-
-                    //Création Bordures première colonne
-                    Border br_planning_column_fin = new Border();
-                    br_planning_column_fin.BorderThickness = new Thickness(1);
-                    Grid.SetRow(br_planning_column_fin, 0);
-                    Grid.SetColumn(br_planning_column_fin, i+1);
-                    grid_planning.Children.Add(br_planning_column_fin);
+                    grid_planning.ColumnDefinitions.Add(cm);                    
                 }
 
                 //Création des lignes du planning 
@@ -73,13 +71,16 @@ namespace EGC_Technicien
                     RowDefinition rw = new RowDefinition();
                     rw.Height = new GridLength(50);
                     grid_planning.RowDefinitions.Add(rw);
-
-                    //Création Bordures première ligne
-                    Border br_planning_row_fin = new Border();
-                    br_planning_row_fin.BorderThickness = new Thickness(1);
-                    Grid.SetRow(br_planning_row_fin, i+1);
-                    Grid.SetColumn(br_planning_row_fin, 0);
-                    grid_planning.Children.Add(br_planning_row_fin);
+                    Label lbl_salle = new Label();
+                    lbl_salle.Content = listSalles[1].GetNom();
+                    lbl_salle.Height = 50;
+                    lbl_salle.Width = 140;
+                    lbl_salle.FontSize = 15;
+                    lbl_salle.HorizontalContentAlignment = HorizontalAlignment.Center;
+                    lbl_salle.VerticalContentAlignment = VerticalAlignment.Center;
+                    Grid.SetRow(lbl_salle, i + 1);
+                    Grid.SetColumn(lbl_salle, 0);
+                    grid_planning.Children.Add(lbl_salle);
                 }
 
 
@@ -87,6 +88,12 @@ namespace EGC_Technicien
                 {
                     for (int j = 0; j < ListHoraire.Count(); j++)
                     {
+                        Border br_planning_fin = new Border();
+                        br_planning_fin.BorderThickness = new Thickness(1);
+                        Grid.SetRow(br_planning_fin, i);
+                        Grid.SetColumn(br_planning_fin, 0);
+                        grid_planning.Children.Add(br_planning_fin);
+
                         Border br_planning = new Border();
                         br_planning.BorderThickness = new Thickness(1);
                         Grid.SetRow(br_planning, i);
@@ -105,35 +112,41 @@ namespace EGC_Technicien
                         grid_planning.Children.Add(lbl_horaire);
 
                         Button btn = new Button();
-                        btn.VerticalContentAlignment = VerticalAlignment.Center;
-                        btn.HorizontalContentAlignment = HorizontalAlignment.Center;
                         btn.Width = 140;
                         btn.Height = 50;
                         btn.FontSize = 15;
                         btn.Background = Brushes.White;
-                        btn.Content = "test";
+                        for (int k = 0; k < parties.SelectAllPartie().Count(); k++)
+                        {
+                            if (parties.SelectAllPartie()[k].GetSalle() == listSalles[k] & parties.SelectAllPartie()[k].GetDateHeure() == date & parties.SelectAllPartie()[k].GetHeure() == ListHoraire[k])
+                            {
+                                btn.Content = "Réservée";
+                            }
+                            if (!(parties.SelectAllPartie()[k].GetSalle() == listSalles[k] & parties.SelectAllPartie()[k].GetDateHeure() == date & parties.SelectAllPartie()[k].GetHeure() == ListHoraire[k]))
+                            {
+                                btn.Content = "Libre";
+                            }
+                        }
+                        if (salle.SelectAllSalle()[i].GetHeureOuverture() == ListHoraire[j] & salle.SelectAllSalle()[i].GetHeureFermeture() == ListHoraire[j])
+                        {
+                            btn.Content = "Fermée";
+                        }
+                        btn.VerticalContentAlignment = VerticalAlignment.Center;
+                        btn.HorizontalContentAlignment = HorizontalAlignment.Center;
                         Grid.SetRow(btn, i+1);
                         Grid.SetColumn(btn, j+1);
 
                         grid_planning.Children.Add(btn);
                     }
-                    Label lbl_salle = new Label();
-                    lbl_salle.Content = listSalles[1].GetNom();
-                    lbl_salle.Height = 50;
-                    lbl_salle.Width = 140;
-                    lbl_salle.FontSize = 15;
-                    lbl_salle.HorizontalContentAlignment = HorizontalAlignment.Center;
-                    lbl_salle.VerticalContentAlignment = VerticalAlignment.Center;
-                    Grid.SetRow(lbl_salle, i+1);
-                    Grid.SetColumn(lbl_salle, 0);
-                    grid_planning.Children.Add(lbl_salle);
+                    
                 }
 
             }
             
 
-            Calendrier.DataContext = new VueModele(bdd, clients, obstacles, partieObstacles, parties, salle, theme, transactions, ville);
+            Calendrier.DataContext = new VueModele(bdd, clients, fonction, obstacles, operateur, operateurSalle, partieObstacles, parties, salle, theme, transactions, ville);
             
         }
+
     }
 }

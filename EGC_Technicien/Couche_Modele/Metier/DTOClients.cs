@@ -33,6 +33,19 @@ namespace Couche_Modele.Metier
             _archiver = archiver;
             _credit = credit;
         }
+
+        public DTOClients(string pseudo, string nom, string prenom, DateTime datenaissance, string adresse, string mail, string telephone, int credit, bool archiver)
+        {
+            _pseudo = pseudo;
+            _nom = nom;
+            _prenom = prenom;
+            _datenaissance = datenaissance;
+            _adresse = adresse;
+            _mail = mail;
+            _telephone = telephone;
+            _archiver = archiver;
+            _credit = credit;
+        }
         #endregion
 
         #region Accesseurs
@@ -60,6 +73,12 @@ namespace Couche_Modele.Metier
         {
             return _ville;
         }
+
+        public void SetVille(DTOVille dTOVille)
+        {
+            _ville = dTOVille;
+        }
+
         public string GetMail()
         {
             return _mail;
